@@ -18,7 +18,7 @@ On every push and once a day, the `verify` workflow builds this source in solana
 On your own machine, with Docker and [solana-verify](https://github.com/otter-sec/solana-verifiable-build):
 
 ```sh
-solana-verify build --library-name nabla_orders --base-image solanafoundation/solana-verifiable-build:4.3.0
+solana-verify build --arch v3 --library-name nabla_orders --base-image solanafoundation/solana-verifiable-build:4.3.0
 solana-verify get-executable-hash target/deploy/nabla_orders.so
 solana-verify get-program-hash -u https://api.mainnet-beta.solana.com AAAtde5ZAg136H2RrNtMohS7k8AVprbGBBEqhT1S8uGA
 ```

@@ -21,7 +21,7 @@ jobs:
       - name: Install solana-verify
         run: cargo install solana-verify --version 0.5.2 --locked
       - name: Build in solana-verify's container
-        run: solana-verify build --library-name nabla_orders --base-image solanafoundation/solana-verifiable-build:4.3.0@sha256:12fd4c0a0790f0fc41ef74b0cdb6bccc167ba6137eb1adb749bac649481c86bd
+        run: solana-verify build --arch v3 --library-name nabla_orders --base-image solanafoundation/solana-verifiable-build:4.3.0@sha256:12fd4c0a0790f0fc41ef74b0cdb6bccc167ba6137eb1adb749bac649481c86bd
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: nabla_orders
