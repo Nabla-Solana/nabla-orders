@@ -1,0 +1,25 @@
+[package]
+name = "nabla-orders"
+version = "0.1.0"
+edition = "2021"
+description = "NABLA's order guard: limit, stop-loss and take-profit fills through Jupiter, bounded by the user's own terms"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+name = "nabla_orders"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = "=1.2.1"
+

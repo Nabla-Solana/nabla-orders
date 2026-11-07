@@ -1,0 +1,17 @@
+[package]
+name = "mock-swap"
+version = "0.1.0"
+edition = "2021"
+description = "Test-only stand-in for Jupiter (never deployed): performs the token transfers its instruction lists"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+name = "mock_swap"
+
+[dependencies]
+anchor-lang = "=1.2.1"
+
+[features]
+custom-heap = []
+custom-panic = []
